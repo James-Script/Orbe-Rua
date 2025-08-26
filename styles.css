@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+.center{
+  max-width: 1000px;
+  padding: 0 2%;
+  display: flex;
+  margin: 0 auto;
+}
+
+header{
+    background-color: rgba(0,0,0,0.6);
+    height: 60px;
+}
+.logo{
+    color:  rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+.logo h3{
+    margin-left: 10px;
+    font-size: 20px;
+}
+.logo .fa-location-dot{
+    color: rgba(255, 0, 0, 0.775);
+  display: flex;
+    font-size: 25px;
+}
+
+.logo .h3 letra{
+    font-family: 'New Rocker', system-ui;
+}
+.menu-container{
+    width: 100%;
+    justify-content: space-between;
+}
+
+.menu-container a.active-menu{
+    background-color: rgba(255, 0, 0, 0.775);
+}
+
+.menu-container a{
+    color: white;
+    display: inline-block;
+    margin: 0 10px;
+    line-height: 60px;
+   padding: 0 10px;
+    text-decoration: none;
+    transition: 0.9s;
+}
+
+.menu-container a:hover{
+    
+    background-color: rgba(255, 0, 0, 0.575);
+}
+
+section.main{
+    position: relative;
+    min-height: 800px;
+    min-width: 600px;
+    background-image: url(image/modelo1.jpg);
+    background-size: cover;
+    background-position: center;
+     box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.1);
+}
+
+.text-chamada{
+    color:white;
+    position: absolute;
+    bottom: 90px;
+    left: 100px;
+}
+
+.text-chamada h1{
+    font-size: 60px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    animation: fadeInDown 1s;
+    transition: all 0.7s;
+}
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.text-chamada h3{
+    font-size: 32px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+     animation: fadeInDown 1s;
+}
+
+section.produtos{
+      background-color: rgba(255, 0, 0, 0.775);
+     padding: 30px 0;
+     text-align: center;
+     color: white;
+}
+section.catalogo{
+       background-color: rgba(255, 0, 0, 0.775);
+         padding: 30px 0;
+ }
+
+ .catalogo-box1{
+    color: #fff;
+    padding: 40px;
+    margin-top: 45px;
+    border-radius: 30px;
+    transition: .2s;
+    margin-bottom: 130px;
+    background-image: url(image/modelo2.jpg);
+    background-size: cover;
+    background-position: center;
+    justify-content: space-between;
+ 
+}
+
+.catalogo-box1:hover{
+    transform: scale(1.05);
+    transition: 0.4s all ease-in-out;
+    box-shadow: 0 0 20px #ffffff77;
+}
+
+ .catalogo-box2{
+    color: #fff;
+    padding: 40px;
+    margin-top: 45px;
+    border-radius: 30px;
+    transition: .2s;
+    margin-bottom: 130px;
+    background-image: url(image/modelo3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.catalogo-box2:hover{
+    transform: scale(1.05);
+    transition: 0.4s all ease-in-out;
+    box-shadow: 0 0 20px #ffffff77;
+}
+
+ .catalogo-box3{
+    color: #fff;
+    padding: 40px;
+    margin-top: 45px;
+    border-radius: 30px;
+    transition: .2s;
+    margin-bottom: 130px;
+}
+
+.catalogo-box3:hover{
+    transform: scale(1.05);
+    transition: 0.4s all ease-in-out;
+    box-shadow: 0 0 20px #ffffff77;
+}
+ .catalogo-box i{
+    font-size: 70px;
+    color: #fff;
+    transition: color 0.5s ease-in-out;
+}
+.catalogo-box:hover i{
+    color: #1e8d0c;
+    text-shadow: #28bf10 0px 0px 4px; 
+}
+.catalogo-box p{
+    text-align:left;
+}
+ .catalogo-box h3{
+    font-size: 28px;
+    margin: 15px 0;
+
+}
