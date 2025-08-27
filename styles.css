@@ -18,23 +18,39 @@ header{
     height: 60px;
 }
 .logo{
+   
     color:  rgb(255, 255, 255);
     display: flex;
     align-items: center;
-    margin: 20px;
+    
 }
-.logo h3{
-    margin-left: 10px;
-    font-size: 20px;
+.medievalsharp-regular {
+  font-family: "MedievalSharp", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h3.palavra{
+     text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+     font-size: 20px;
+   
 }
 .logo .fa-location-dot{
     color: rgba(255, 0, 0, 0.775);
   display: flex;
     font-size: 25px;
+     text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
 }
 
-.logo .h3 letra{
-    font-family: 'New Rocker', system-ui;
+
+
+h3.letra{
+    margin-left: 8px;
+font-family: "MedievalSharp", cursive;
+        font-size: 40px;
+       text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+         
+
 }
 .menu-container{
     width: 100%;
@@ -53,6 +69,7 @@ header{
    padding: 0 10px;
     text-decoration: none;
     transition: 0.9s;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
 }
 
 .menu-container a:hover{
@@ -75,6 +92,7 @@ section.main{
     position: absolute;
     bottom: 90px;
     left: 100px;
+    
 }
 
 .text-chamada h1{
@@ -103,7 +121,10 @@ section.produtos{
       background-color: rgba(255, 0, 0, 0.775);
      padding: 30px 0;
      text-align: center;
+     font-size: 25px;
      color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+
 }
 section.catalogo{
        background-color: rgba(255, 0, 0, 0.775);
