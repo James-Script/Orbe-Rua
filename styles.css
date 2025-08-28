@@ -114,8 +114,12 @@ section.main{
 .text-chamada h3{
     font-size: 32px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-     animation: fadeInDown 1s;
+    animation: fadeInDown 1.5s;
+    transition: all 0.7s;
 }
+
+
+
 
 section.produtos{
       background-color: rgba(255, 0, 0, 0.775);
@@ -124,11 +128,59 @@ section.produtos{
      font-size: 25px;
      color: white;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-
 }
+
+.fade-in-up {
+  animation: fadeInUp 1.5s ease smooth forwards;
+  transition: all ease 0.7s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up:nth-child(1) { animation-delay: 0.2s; }
+.fade-in-up:nth-child(2) { animation-delay: 0.4s; }
+.fade-in-up:nth-child(3) { animation-delay: 0.6s; }
+.fade-in-up:nth-child(4) { animation-delay: 0.8s; }
+
+.scroll-animar {
+  opacity: 0;
+  transform: translateY(70px) scale(0.95);
+  transition: 
+    opacity 1.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 1.7s cubic-bezier(0.16, 1, 0.3, 1);
+  visibility: hidden;
+  will-change: opacity, transform;
+}
+
+.scroll-animar.visivel {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  visibility: visible;
+  transition: 
+    opacity 1.5s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+
 section.catalogo{
        background-color: rgba(255, 0, 0, 0.775);
          padding: 30px 0;
+         display: flex;
+  gap: 30px; /* espaçamento entre cards */
+  justify-content: center;
+  flex-wrap: nowrap; /* não quebra linha (para slider funcionar) */
+    overflow-x: auto; /* habilita rolagem horizontal */
+
  }
 
  .catalogo-box1{
@@ -136,12 +188,12 @@ section.catalogo{
     padding: 40px;
     margin-top: 45px;
     border-radius: 30px;
-    transition: .2s;
+    transition: 0.2s;
     margin-bottom: 130px;
     background-image: url(image/modelo2.jpg);
     background-size: cover;
     background-position: center;
-    justify-content: space-between;
+    
  
 }
 
@@ -151,12 +203,28 @@ section.catalogo{
     box-shadow: 0 0 20px #ffffff77;
 }
 
+.btn-comprar {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  background: #e63946;
+  color: #fff;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+.btn-comprar:hover {
+  background: #d62828;
+}
+
+
  .catalogo-box2{
     color: #fff;
     padding: 40px;
     margin-top: 45px;
     border-radius: 30px;
-    transition: .2s;
+    transition: 0.2s;
     margin-bottom: 130px;
     background-image: url(image/modelo3.jpg);
     background-size: cover;
@@ -174,8 +242,11 @@ section.catalogo{
     padding: 40px;
     margin-top: 45px;
     border-radius: 30px;
-    transition: .2s;
+    transition: 0.2s;
     margin-bottom: 130px;
+    background-image: url(image/modelo4.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 .catalogo-box3:hover{
