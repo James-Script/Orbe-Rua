@@ -174,27 +174,50 @@ section.produtos{
 
 section.catalogo{
        background-color: rgba(255, 0, 0, 0.775);
-         padding: 30px 0;
+         padding: 20px 0;
          display: flex;
+         scroll-behavior: smooth;
   gap: 30px; /* espaçamento entre cards */
   justify-content: center;
   flex-wrap: nowrap; /* não quebra linha (para slider funcionar) */
     overflow-x: auto; /* habilita rolagem horizontal */
-
+    overflow: hidden;
+    position: relative;
+    
  }
 
+.catalogo-container{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    overflow: visible;
+    gap: 30px;  
+    scroll-behavior: smooth;
+    position: relative;
+    
+  
+}
+.catalogo .center{
+    justify-content: center;
+    gap: 30px;  
+    scroll-behavior: smooth;
+    overflow-x: visible;
+    margin: 0;
+}
  .catalogo-box1{
+    width: 400px;
+    height: 300px;
     color: #fff;
     padding: 40px;
     margin-top: 45px;
     border-radius: 30px;
     transition: 0.2s;
     margin-bottom: 130px;
-    background-image: url(image/modelo2.jpg);
     background-size: cover;
     background-position: center;
+    background-color:white ;
+    color:black;  
     
- 
 }
 
 .catalogo-box1:hover{
@@ -204,7 +227,8 @@ section.catalogo{
 }
 
 .btn-comprar {
-  margin-top: 15px;
+    display: inline-block;
+  margin-top: 3px;
   padding: 10px 20px;
   border: none;
   background: #e63946;
@@ -220,33 +244,55 @@ section.catalogo{
 
 
  .catalogo-box2{
+       width: 400px;
+    height: 300px;
     color: #fff;
     padding: 40px;
     margin-top: 45px;
     border-radius: 30px;
     transition: 0.2s;
     margin-bottom: 130px;
-    background-image: url(image/modelo3.jpg);
     background-size: cover;
     background-position: center;
+    background-color:white ;
+    color:black;
+    
+   
 }
 
 .catalogo-box2:hover{
     transform: scale(1.05);
     transition: 0.4s all ease-in-out;
     box-shadow: 0 0 20px #ffffff77;
+
+}
+
+.catalogo-box2:before{
+    content: "";
+    
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    transition: background 0.3s ease;
+    z-index: -1;
+
 }
 
  .catalogo-box3{
+       width: 400px;
+    height: 300px;
     color: #fff;
     padding: 40px;
     margin-top: 45px;
     border-radius: 30px;
     transition: 0.2s;
     margin-bottom: 130px;
-    background-image: url(image/modelo4.jpg);
     background-size: cover;
     background-position: center;
+    background-color:white ;
+    color:black;
 }
 
 .catalogo-box3:hover{
@@ -270,4 +316,80 @@ section.catalogo{
     font-size: 28px;
     margin: 15px 0;
 
+}
+
+/* modelando as imagens do catalogo */
+.catalogo-box1 img,
+.catalogo-box2 img,
+.catalogo-box3 img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  
+}
+
+/* seta o catálogo */
+.arrow {
+    position: absolute;
+    top: 45%;
+  transform: translateY(-50%);
+  background: rgba(155, 22, 22, 0.5);
+  color: #fff;
+  border: none;
+width: 50px;
+  height: 50px;
+  font-size: 2rem;
+  padding: 12px;
+  border-radius: 100%;
+  cursor: pointer;
+  z-index: 20;
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+    justify-content: center;
+
+}
+
+
+.arrow.left { 
+  left: -70px; /* fica um pouco pra fora do container */
+  border-right: 3px solid rgba(209, 209, 209, 0.915);
+}
+
+.arrow.right { 
+  right: -70px; /* idem */
+    border-left: 3px solid  rgba(209, 209, 209, 0.915);
+}
+
+.arrow:hover {
+  background: rgba(155, 22, 22, 0.8);
+  transition: all 0.3s ease-in-out;
+    transform: translateY(-50%) scale(1.02);
+    opacity: 0.9;
+    box-shadow: 0 0 10px rgba(209, 209, 209, 0.915);
+}
+
+/* Estiliza toda a barra */
+::-webkit-scrollbar {
+  width: 10px;   /* largura da barra vertical */
+  height: 10px;  /* altura da barra horizontal */
+}
+
+/* Fundo da barra */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+  border-radius: 10px;
+}
+
+/* "Polegar" (parte que arrasta) */
+::-webkit-scrollbar-thumb {
+  background: #ff3d3d;
+  border-radius: 10px;
+  border: 2px solid #f1f1f1; /* dá um espaço entre o fundo */
+}
+
+/* Hover no polegar */
+::-webkit-scrollbar-thumb:hover {
+  background: #e91e1e;
 }
